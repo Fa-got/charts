@@ -1,6 +1,13 @@
-import times from "lodash/times";
+// import times from "lodash/times";
 
 export default [
+	{
+		name: "emails",
+		data: {
+			h1: "List of EMAILS Collected"
+		},
+		options: {}
+	},
 	{
 		name: "pie-interections",
 		data: {
@@ -41,12 +48,14 @@ export default [
 					position: "bottom"
 				},
 				colors: [
-					"#CD5599",
+					"#cd5599",
 					"#009bdf",
 					"#6e2b62",
 					"#115e67",
 					"#63666a",
-					"#a6192e"
+					"#a6192e",
+					"#0067b8",
+					"#00a9ac"
 				]
 			},
 			data: [
@@ -115,32 +124,15 @@ export default [
 				["Italian", Math.random()*250,"#a6192e"]
 
 			],
-
-			// data: [
-			// 	[
-			// 		"Genre",
-			// 		"Fantasy & Sci Fi",
-			// 		"Romance",
-			// 		"Mystery/Crime",
-			// 		"General",
-			// 		"Western",
-			// 		"Literature",
-			// 		"Literature",
-			// 		{ role: "annotation" }
-			// 	],
-			// 	["Arabic", Math.random()*250,"#CD5599"],
-			// 		["English", Math.random()*250,"#009bdf"],
-			// 		["German", Math.random()*250,"#6e2b62"],
-			// 		["French", Math.random()*250,"#115e67"],
-			// 		["Russian", Math.random()*250,"#63666a"],
-			// 		["Mandarin", Math.random()*250,"#00a9ac"],
-			// 		["Spanish", Math.random()*250,"#0067b9"],
-			// 		["Italian", Math.random()*250,"#a6192e"]
-			// ],
-
 			width: "100%",
 			height: "100%",
 			options: {
+				vAxis: {
+					gridlines: {
+						color: 'none'
+					},
+					lineWidth: 1
+				},
 				legend: { position: "none", maxLines: 3 },
 				bar: { groupWidth: "50%" },
 
