@@ -1,13 +1,10 @@
-import React, { createElement } from "react";
+import { createElement } from "react";
 import { ComponentStateStore } from "redux-store-controller";
-import map from "lodash/map";
-import ChartsMainComposition from './chartsMainComposition';
-import ChartsHeaderComposition from './chartsHeaderComposition';
-
-
+import ChartsMainComposition from "./chartsMainComposition";
+import ChartsHeaderComposition from "./chartsHeaderComposition";
 
 export default class ChartsComposition extends ComponentStateStore {
-	constructor(propsData){
+	constructor(propsData) {
 		super({ props: propsData, name: "homeComposition" });
 	}
 	headerView() {
@@ -17,15 +14,16 @@ export default class ChartsComposition extends ComponentStateStore {
 	}
 	mainView() {
 		return createElement(
-			"div",
+			"aside",
 			{
-				className: "home-main"
+				className: "home-main",
+				id: "main"
 			},
 			createElement(ChartsMainComposition, {
-			stores: this.props.stores
-		}));
+				stores: this.props.stores
+			})
+		);
 	}
-
 
 	render() {
 		return createElement(
@@ -38,4 +36,3 @@ export default class ChartsComposition extends ComponentStateStore {
 		);
 	}
 }
-
