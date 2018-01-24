@@ -3,6 +3,7 @@ import ViewController from "~/views/viewController";
 
 import StoreList from "./storeList";
 import SubscriptionMap from "./subscriptionMap";
+import DbAgent from "./../js/controller/dbAgent";
 
 const LoaderList = [
 	{
@@ -23,6 +24,13 @@ const LoaderList = [
 				type: "class",
 				controller: StoreController,
 				params: ["storeList", "subscriptionMap"]
+			},
+			{
+				name: "db",
+				type: "class",
+				controller: DbAgent,
+				params: ["stores"],
+				isLoaded: false
 			}
 		]
 	},

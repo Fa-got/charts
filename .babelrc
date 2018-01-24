@@ -2,7 +2,7 @@
 	"presets" : ["es2015", "react",
 		["env", {
 			"targets": {
-				"browsers": ["Explorer 11"]
+				"browsers": ["last 2 versions", "safari >= 7", "Explorer 11"]
 			}
 		}]],
 	"plugins": [

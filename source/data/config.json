@@ -1,3 +1,11 @@
 {
-	"port": 3000
+	"port": 3000,
+	"db": {
+		"connectionLimit": 10,
+		"dateStrings": true,
+		"host": "192.168.10.2",
+		"user": "dev",
+		"password": "Kvinto",
+		"database": "dtcm"
+	}
 }

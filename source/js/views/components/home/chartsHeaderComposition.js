@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import jspdf from "jspdf";
 import html2canvas from "html2canvas";
 
+
 export default class ChartsHeaderComposition extends Component {
 
 	// eslint-disable-next-line class-methods-use-this
 	printDocument() {
+
 		const input = window.document.getElementById("main");
 		html2canvas(input).then(canvas => {
 			const imgData = canvas.toDataURL("image/JPEG");
